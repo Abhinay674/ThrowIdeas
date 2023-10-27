@@ -1,11 +1,11 @@
 import './css/style.css';
-import '@fortawesome/fontawesome-free/css/all.css'
+// import '@fortawesome/fontawesome-free/css/all.css'
+import Modal from './css/components/Modal';
+import IdeaForm from './css/components/IdeaForm';
+import IdeaList from './css/components/IdeaList';
 
-const modal = document.querySelector('#modal');
-const modalBtn = document.querySelector('#modal-btn');
+const modal = new Modal();
+const ideaForm = new IdeaForm();
+ideaForm.render();
+const ideaList = new IdeaList();
 
-function open() {
-  modal.computedStyleMap.display = 'block';
-}
-
-modalBtn.addEventListener('click', open);
